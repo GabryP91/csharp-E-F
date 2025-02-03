@@ -430,6 +430,8 @@ namespace csharp_E_F
 
             int massimo = numeri[0];
 
+            Console.WriteLine("\nRicerca del massimo nell'array......");
+
             //parto dalla posizione successiva alla prima dal momento che l'ho già ottenuta
             for (int i = 1; i < numeri.Length; i++)
             {
@@ -485,17 +487,24 @@ namespace csharp_E_F
 
 
                 previousNumber = temp;
+                numeri[i] = temp;
                 count++;
+            }
+
+            int somma = 0;
+
+            Console.WriteLine($"\nHai inserito {count} numeri.");
+
+            for (int i = 0; i < numeri.Length; i++)
+            {
+                somma += numeri[i];
             }
 
             if (count > 0)
             {
-                double somma = 0;
+                
+                Console.WriteLine(somma);
 
-                Console.WriteLine($"\nHai inserito {count} numeri.");
-
-                // Calcoliamo la somma e la media
-                somma = count * (previousNumber + 1);  // Usa la somma di numeri
                 double media = somma / count;  
 
                 Console.WriteLine($"La media dei numeri è: {media}");
@@ -564,10 +573,10 @@ namespace csharp_E_F
                 Console.WriteLine($"Numero totale di caffè fatti: {this.caffèFattiUltimaVolta}");
             }
 
-            // Metodo per mostrare il numero di caffè fatti dall'ultima volta che è stato svuotato il cassetto
+            // Metodo per mostrare le cialde usate
             public void MostraCaffeFattiDallUltimaVolta()
             {
-                Console.WriteLine($"Caffè fatti dall'ultima volta che è stato svuotato il cassetto: {this.caffèFattiUltimaVolta}");
+                Console.WriteLine($"Cialde usate: {this.cialdeUsate}");
             }
 
             // Metodo per visualizzare lo stato della macchinetta
