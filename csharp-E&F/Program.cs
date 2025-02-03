@@ -206,7 +206,7 @@ namespace csharp_E_F
                         StampaArray6();
                         break;
                     case 7:
-                        Console.WriteLine("ESERCIZIO 6\n");
+                        Console.WriteLine("ESERCIZIO 7\n");
 
                         // Creiamo una nuova macchinetta con 15 cialde iniziali
                         MacchinettaCaffe macchinetta = new MacchinettaCaffe(15);
